@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Access your StoryTail account. Manage your bookings, activity downloads, and newsletter preferences.">
+    <title>Login | StoryTail Member Access</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top right, var(--secondary), transparent 40%), radial-gradient(circle at bottom left, var(--primary), transparent 40%);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .auth-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            padding: 4rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            max-width: 450px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .auth-logo {
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .auth-logo .logo {
+            font-size: 2.5rem;
+            justify-content: center;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .auth-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .auth-links a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-blob"></div>
+    </div>
+
+
+    <section class="auth-container">
+        <!-- Floating Elements -->
+        <div class="floating-element" style="top: 10%; left: 5%;"><i class="ri-heart-line"
+                style="font-size: 4rem; color: var(--accent); opacity: 0.2;"></i></div>
+        <div class="floating-element" style="bottom: 10%; right: 5%; animation-delay: 2s;"><i class="ri-book-line"
+                style="font-size: 6rem; color: var(--primary); opacity: 0.1;"></i></div>
+
+        <div class="auth-card reveal">
+            <div class="auth-logo">
+                <a href="index.html" class="logo">Story<span>Tail</span></a>
+                <p class="mt-1" style="color: var(--text-muted);">Welcome back to the bookshelf!</p>
+            </div>
+
+            <form action="#" method="POST">
+                <div class="form-group mb-1">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" placeholder="reader@example.com" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Login <i
+                        class="ri-login-box-line"></i></button>
+
+                <div class="auth-links">
+                    <a href="#">Forgot Password?</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+            </form>
+
+            <div class="social-login mt-3">
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">Or sign in with</p>
+                <div class="flex-gap-sm justify-center">
+                    <button class="btn btn-outline" style="padding: 0.5rem 1.5rem;"><i class="ri-google-fill"></i>
+                        Google</button>
+                    <button class="btn btn-outline" style="padding: 0.5rem 1.5rem;"><i class="ri-apple-fill"></i>
+                        Apple</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

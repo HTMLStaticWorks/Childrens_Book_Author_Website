@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join StoryTail today. Create an account to access exclusive children's book previews, free activity downloads, and member news.">
+    <title>Create Your Account | Join StoryTail Member Program</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at bottom right, var(--secondary), transparent 40%), radial-gradient(circle at top left, var(--primary), transparent 40%);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .auth-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            padding: 4rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            max-width: 500px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .auth-logo {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .auth-logo .logo {
+            font-size: 2.5rem;
+            justify-content: center;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .auth-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .auth-links a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-blob"></div>
+    </div>
+
+
+    <section class="auth-container">
+        <!-- Floating Elements -->
+        <div class="floating-element" style="top: 10%; left: 5%;"><i class="ri-brush-3-line"
+                style="font-size: 4rem; color: var(--accent); opacity: 0.2;"></i></div>
+        <div class="floating-element" style="bottom: 10%; right: 5%; animation-delay: 2s;"><i class="ri-palette-line"
+                style="font-size: 6rem; color: var(--primary); opacity: 0.1;"></i></div>
+
+        <div class="auth-card reveal">
+            <div class="auth-logo">
+                <a href="index.html" class="logo">Story<span>Tail</span></a>
+                <p class="mt-1" style="color: var(--text-muted);">Join our magical community today!</p>
+            </div>
+
+            <form action="#" method="POST">
+                <div class="grid-2 gap-1 mb-1">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" placeholder="Jane" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group mb-1">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" placeholder="reader@example.com" required>
+                </div>
+                <div class="form-group mb-1">
+                    <label>Create Password</label>
+                    <input type="password" class="form-control" placeholder="Min. 8 characters" required>
+                </div>
+
+                <div class="form-group mb-2"
+                    style="display: flex; align-items: flex-start; gap: 0.8rem; font-size: 0.8rem;">
+                    <input type="checkbox" required style="width: 20px; height: 20px;">
+                    <p>I agree to the <a href="privacy.html" style="color: var(--primary); font-weight: 700;">Terms of
+                            Service</a> and our Privacy Policy regarding the handling of my data.</p>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Create Account <i
+                        class="ri-user-add-line"></i></button>
+
+                <div class="auth-links">
+                    <p>Already have an account? <a href="login.html"
+                            style="color: var(--primary); font-weight: 700;">Login Here</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <style>
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

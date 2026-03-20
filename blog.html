@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Read the latest news, writing tips, and storytelling adventures from [Author Name]'s blog. Tips for parents and aspiring writers.">
+    <title>The Storyteller's Blog | [Author Name]</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Shared animations & utilities */
+        .premium-onload {
+            opacity: 0;
+            animation: sweepUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        .anim-delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .anim-delay-2 {
+            animation-delay: 0.3s;
+        }
+
+        .anim-delay-3 {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes sweepUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* SECTION 1: Magic Header */
+        .blog-hero {
+            position: relative;
+            padding: 10rem 0 6rem;
+            background: linear-gradient(135deg, #1A1A2E, #16213E, var(--primary));
+            color: white;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .bh-cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            filter: blur(40px);
+            border-radius: 50%;
+            animation: orbital 20s infinite linear;
+            z-index: 1;
+        }
+
+        .bh-cloud-1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            left: -100px;
+            background: var(--accent);
+        }
+
+        .bh-cloud-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -150px;
+            right: -100px;
+            background: rgba(108, 92, 231, 0.6);
+            animation-direction: reverse;
+            animation-duration: 25s;
+        }
+
+        @keyframes orbital {
+            0% {
+                transform: rotate(0deg) translateX(50px) rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(50px) rotate(-360deg);
+            }
+        }
+
+        /* SECTION 2: Spotlight Story */
+        .spotlight-wrapper {
+            background: var(--bg-paper);
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .spotlight-img-wrap {
+            position: relative;
+            border-radius: var(--radius-lg);
+            padding: 1rem;
+            background: var(--bg-white);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            animation: float-spotlight 6s ease-in-out infinite alternate;
+        }
+
+        .spotlight-img-wrap img {
+            border-radius: var(--radius-md);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @keyframes float-spotlight {
+            0% {
+                transform: translateY(0) rotate(-1deg);
+            }
+
+            100% {
+                transform: translateY(-20px) rotate(1deg);
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        .spot-badge {
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+        }
+
+        /* SECTION 3: Tales Grid */
+        .tales-section {
+            padding: 6rem 0;
+            background: var(--bg-light);
+        }
+
+        .tales-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .tale-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+        }
+
+        .tale-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(108, 92, 231, 0.15);
+            border-color: var(--primary);
+        }
+
+        .tale-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .tale-card:hover .tale-img {
+            transform: scale(1.1);
+        }
+
+        .tale-content {
+            padding: 2rem;
+            position: relative;
+            background: var(--bg-white);
+            z-index: 2;
+        }
+
+        .tale-meta {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* SECTION 4: Magical Mailbox */
+        .mailbox-section {
+            padding: 6rem 0;
+            background: var(--bg-paper);
+        }
+
+        .mailbox-container {
+            background: linear-gradient(45deg, var(--bg-white), var(--bg-light));
+            border-radius: 40px;
+            padding: 4rem;
+            text-align: center;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .mailbox-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--accent), var(--primary), #FF9E79);
+            z-index: -1;
+            border-radius: 42px;
+            animation: border-dance 4s linear infinite;
+            background-size: 300% 300%;
+        }
+
+        @keyframes border-dance {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .mail-anim {
+            display: inline-block;
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            animation: mail-bounce 2s infinite cubic-bezier(0.28, 0.84, 0.42, 1);
+        }
+
+        @keyframes mail-bounce {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-15px) scale(1.1);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .spotlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mailbox-container {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .blog-hero {
+                padding: 8rem 0 4rem;
+            }
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-blob"></div>
+    </div>
+
+    <!-- Shared Header Placeholder -->
+    <nav class="navbar"></nav>
+
+    <!-- SECTION 1: Magic Header -->
+    <header class="blog-hero">
+        <div class="bh-cloud bh-cloud-1"></div>
+        <div class="bh-cloud bh-cloud-2"></div>
+        <div class="container" style="position: relative; z-index: 5;">
+            <div class="premium-onload anim-delay-1">
+                <span class="book-tag"
+                    style="background: rgba(255,255,255,0.2); color: white; border: none; margin-bottom: 1.5rem;">The
+                    Storyteller's Diary</span>
+            </div>
+            <h1 class="premium-onload anim-delay-2" style="font-size: 3.5rem; margin-bottom: 1rem; color: #FFF;">
+                Chronicles of Creativity</h1>
+            <p class="premium-onload anim-delay-3"
+                style="max-width: 600px; margin: 0 auto; font-size: 1.2rem; color: rgba(255,255,255,0.9);">Step behind
+                the curtain. Discover writing tips, early sketches, and the magic that brings our books to life.</p>
+        </div>
+    </header>
+
+    <!-- SECTION 2: Spotlight Story -->
+    <section class="spotlight-wrapper">
+        <div class="container">
+            <div class="spotlight-grid">
+                <div class="reveal" style="position: relative; z-index: 2;">
+                    <span class="spot-badge">Featured Post</span>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; line-height: 1.2;">How We Sketched the <span
+                            style="color: var(--primary);">Backyard Jungle</span></h2>
+                    <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Take a peek at the
+                        original watercolors that brought Leo's universe to life. The first drafts were quite different
+                        than the vibrant final pages you see today.</p>
+
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem;">
+                        <img src="assets/images/author.png" alt="Author"
+                            style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent);">
+                        <div>
+                            <strong style="display: block; color: var(--text-main);">Eliza Joy</strong>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">May 20, 2024 • 5 min read</span>
+                        </div>
+                    </div>
+
+                    <a href="blog-details.html" class="btn btn-primary"
+                        style="padding: 1rem 2.5rem; font-size: 1.1rem; border-radius: var(--radius-full); box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);">Read
+                        Full Story <i class="ri-arrow-right-line"></i></a>
+                </div>
+
+                <div class="spotlight-img-wrap reveal" style="transition-delay: 0.3s;">
+                    <img src="assets/images/hero.png" alt="Sketching process">
+                    <!-- Floating decorative element -->
+                    <div
+                        style="position: absolute; bottom: -20px; left: -20px; background: var(--accent); color: white; padding: 1rem; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 10px 20px rgba(253, 203, 110, 0.4); animation: orbital 10s infinite linear; z-index: 5;">
+                        <i class="ri-pencil-ruler-2-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Tales Grid -->
+    <section class="tales-section">
+        <div class="container">
+            <div class="text-center reveal mb-5">
+                <h2 style="font-size: 2.5rem;">Latest Notes & Tidbits</h2>
+            </div>
+
+            <div class="tales-grid">
+                <!-- Tale 1 -->
+                <a href="blog-details.html" class="tale-card reveal"
+                    style="text-decoration: none; color: inherit; transition-delay: 0.1s;">
+                    <div style="overflow: hidden;">
+                        <img src="assets/images/book-3.png" alt="Post thumbnail" class="tale-img">
+                    </div>
+                    <div class="tale-content">
+                        <span class="tale-meta">Events</span>
+                        <h3 style="margin-bottom: 0.8rem; font-size: 1.4rem;">Favorite Moments from the May Reading</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Over 50 children
+                            joined us at the Big Library for an afternoon of storytelling and magic.</p>
+                    </div>
+                </a>
+
+                <!-- Tale 2 -->
+                <a href="blog-details.html" class="tale-card reveal"
+                    style="text-decoration: none; color: inherit; transition-delay: 0.2s;">
+                    <div style="overflow: hidden;">
+                        <img src="assets/images/book-2.png" alt="Post thumbnail" class="tale-img">
+                    </div>
+                    <div class="tale-content">
+                        <span class="tale-meta">Resources</span>
+                        <h3 style="margin-bottom: 0.8rem; font-size: 1.4rem;">Tips for Teaching Early Readers</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Discover five simple
+                            ways to keep your children engaged during storytime, from silly voices to props.</p>
+                    </div>
+                </a>
+
+                <!-- Tale 3 -->
+                <a href="blog-details.html" class="tale-card reveal"
+                    style="text-decoration: none; color: inherit; transition-delay: 0.3s;">
+                    <div style="overflow: hidden;">
+                        <img src="assets/images/book-1.png" alt="Post thumbnail" class="tale-img">
+                    </div>
+                    <div class="tale-content">
+                        <span class="tale-meta">Process</span>
+                        <h3 style="margin-bottom: 0.8rem; font-size: 1.4rem;">What's Next for Little Leo?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">A teaser of our
+                            upcoming Winter release. Leo discovers that the jungle looks very different in snow.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Footer Placeholder -->
+    <footer></footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
