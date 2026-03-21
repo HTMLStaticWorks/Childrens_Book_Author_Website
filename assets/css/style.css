@@ -154,6 +154,16 @@ a {
     .section-padding {
         padding: var(--space-lg) 0;
     }
+
+    .typewriter-hero .flex-gap-sm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .typewriter-hero .flex-gap-sm .btn {
+        width: 100%;
+        max-width: 260px;
+    }
 }
 
 /* 5. Components */
@@ -207,10 +217,8 @@ a {
 }
 
 /* Nav White (For dark backgrounds) */
-.navbar.nav-white:not(.scrolled) .logo,
 .navbar.nav-white:not(.scrolled) .nav-link,
-.navbar.nav-white:not(.scrolled) .menu-btn,
-.navbar.nav-white:not(.scrolled) .theme-toggle {
+.navbar.nav-white:not(.scrolled) .menu-btn {
     color: white !important;
 }
 
@@ -510,6 +518,7 @@ a {
 
     .hero-left .flex-gap-sm {
         justify-content: center;
+        gap: 1.5rem;
     }
 
     .hero-right {

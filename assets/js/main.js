@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="cta-content">
                         <span class="hero-tag mb-1">✨ Write Your Story</span>
                         <h2 class="mb-2">Ready to Start Your Journey?</h2>
-                        <p class="mb-3 mx-auto" style="max-width: 700px;">Explore a world where every page is a doorway to
+                        <p class="mb-3 mx-auto text-center" style="max-width: 700px; margin-left: auto; margin-right: auto; text-align: center;">Explore a world where every page is a doorway to
                             adventure. From whimsical picture books to interactive digital stories, find your next favorite
                             bedtime companion today.</p>
                         <div class="flex-gap-sm justify-center mt-3">

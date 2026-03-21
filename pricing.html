@@ -11,6 +11,17 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
+        .pricing-page[data-theme="dark"] {
+            --bg-light: #F9F7F2;
+            --bg-white: #FFFFFF;
+            --text-main: #2D3436;
+            --text-muted: #636E72;
+            --border: rgba(108, 92, 231, 0.1);
+            --glass: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -199,7 +210,7 @@
     </style>
 </head>
 
-<body data-theme="light">
+<body data-theme="light" class="pricing-page">
 
     <!-- Preloader -->
     <div id="preloader">
@@ -298,7 +309,7 @@
                 </div>
 
                 <div class="step-card reveal" style="transition-delay: 0.5s;">
-                    <div class="step-icon" style="background: #FF9E79;"><i class="ri-rocket-2-line"></i></div>
+                    <div class="step-icon" style="background: var(--secondary);"><i class="ri-rocket-2-line"></i></div>
                     <h3 style="color: var(--text-main); margin-bottom: 1rem;">3. Present</h3>
                     <p style="color: var(--text-muted); font-size: 0.95rem;">The day arrives! I show up, make the kids
                         laugh, sign some books, and leave them feeling inspired.</p>

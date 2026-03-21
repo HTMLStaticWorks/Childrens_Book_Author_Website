@@ -203,7 +203,7 @@
         }
 
         .mailbox-container {
-            background: linear-gradient(45deg, var(--bg-white), var(--bg-light));
+            background: linear-gradient(135deg, var(--primary), #8e44ad);
             border-radius: 40px;
             padding: 4rem;
             text-align: center;
@@ -213,6 +213,7 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
             overflow: hidden;
             z-index: 1;
+            color: white;
         }
 
         .mailbox-container::before {
@@ -246,9 +247,13 @@
         .mail-anim {
             display: inline-block;
             font-size: 4rem;
-            color: var(--primary);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 1rem;
             animation: mail-bounce 2s infinite cubic-bezier(0.28, 0.84, 0.42, 1);
+        }
+
+        .mailbox-container h2 {
+            color: white;
         }
 
         @keyframes mail-bounce {
@@ -557,7 +562,7 @@
             <div class="mailbox-container reveal">
                 <div class="mail-anim"><i class="ri-mail-send-line"></i></div>
                 <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Join the Magic Mail</h2>
-                <p style="max-width: 600px; margin: 0 auto 2.5rem; color: var(--text-muted); font-size: 1.1rem;">
+                <p style="max-width: 600px; margin: 0 auto 2.5rem; color: rgba(255, 255, 255, 0.85); font-size: 1.1rem;">
                     Subscribe
                     to our newsletter and get a secret coloring page delivered to your inbox every month.</p>
 
