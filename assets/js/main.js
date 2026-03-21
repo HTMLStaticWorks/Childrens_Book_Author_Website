@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><a href="pricing.html" class="nav-link" data-page="pricing.html">Visits</a></li>
                 <li><a href="contact.html" class="nav-link" data-page="contact.html">Contact</a></li>
                 <li><a href="login.html" class="nav-link" data-page="login.html">Login</a></li>
-                <li><button class="theme-toggle"><i class="ri-moon-line"></i></button></li>
             </ul>
 
-            <button class="menu-btn" aria-label="Toggle Menu">
-                <i class="ri-menu-3-line"></i>
-            </button>
+            <div class="nav-right">
+                <button class="theme-toggle"><i class="ri-moon-line"></i></button>
+                <button class="menu-btn" aria-label="Toggle Menu">
+                    <i class="ri-menu-3-line"></i>
+                </button>
+            </div>
         </div>
         `;
 
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="pricing.html" class="mobile-nav-link" data-page="pricing.html">Visits</a>
             <a href="contact.html" class="mobile-nav-link" data-page="contact.html">Contact</a>
             <a href="login.html" class="mobile-nav-link" data-page="login.html">Login</a>
+            <button class="mobile-nav-link theme-toggle" style="background: transparent; border: none; text-align: left; cursor: pointer; padding: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; font-family: 'Fredoka', sans-serif;">Theme <i class="ri-moon-line" style="font-size: 1.5rem;"></i></button>
         </div>
         `;
 
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderFooter = () => {
         const footerHTML = `
         <!-- Premium Call to Adventure Section -->
-        <section class="section-padding premium-cta-section" style="background: var(--bg-white); border-top: 1px solid var(--border); padding-bottom: 0;">
+        <section class="premium-cta-section" style="background: var(--bg-white); border-top: 1px solid var(--border); padding: 4rem 0 0;">
             <div class="container">
                 <div class="premium-cta-card reveal">
                     <div class="cta-content">
@@ -122,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="container py-2 text-center"
             style="border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; padding: 2rem 0;">
-            &copy; 2024 StoryTail by [Author Name]. All rights reserved.
+            &copy; 2026 StoryTail by [Author Name]. All rights reserved.
         </div>
         `;
 
@@ -157,28 +160,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. Dark Mode Toggle
-    const themeToggle = document.querySelector('.theme-toggle');
+    const themeToggles = document.querySelectorAll('.theme-toggle');
     const body = document.body;
 
     // Check local storage
     const currentTheme = localStorage.getItem('theme') || 'light';
     body.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
+    updateThemeIcons(currentTheme);
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
             const theme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             body.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            updateThemeIcon(theme);
+            updateThemeIcons(theme);
         });
-    }
+    });
 
-    function updateThemeIcon(theme) {
-        const icon = themeToggle?.querySelector('i');
-        if (icon) {
-            icon.className = theme === 'dark' ? 'ri-sun-line' : 'ri-moon-line';
-        }
+    function updateThemeIcons(theme) {
+        themeToggles.forEach(toggle => {
+            const icon = toggle.querySelector('i');
+            if (icon) {
+                icon.className = theme === 'dark' ? 'ri-sun-line' : 'ri-moon-line';
+            }
+        });
     }
 
     // 4. Scroll Reveal (Intersection Observer)

@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Icons & Styles -->
+    <link rel="icon" href="assets/images/author.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -59,7 +60,7 @@
             </div>
             <div class="hero-right reveal">
                 <div class="hero-image-wrapper">
-                    <img src="assets/images/hero-art.png" alt="Magical Story Image" class="floating-img">
+                    <img src="assets/images/hero-art.png" alt="Magical Story Reading Adventure" class="floating-img">
                 </div>
             </div>
         </div>
@@ -137,7 +138,7 @@
                         class="ri-magic-fill"></i></div>
 
                 <div class="zigzag-img">
-                    <img src="assets/images/author.png" alt="Author Portrait"
+                    <img src="assets/images/author-new.png" alt="Author Eliza Joy in her Magical Studio"
                         style="z-index: 5; position: relative; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 4px solid var(--bg-white);">
                 </div>
             </div>
@@ -201,6 +202,153 @@
         </div>
     </section>
 
+
+
+    <!-- 3D Magical Flip Cards Section -->
+    <section class="section-padding flip-heroes-section"
+        style="background: var(--bg-light); border-top: 1px solid var(--border); overflow: hidden;">
+        <!-- Floating decorative elements -->
+        <i class="ri-sparkling-fill bg-icon"
+            style="top: 10%; right: 5%; color: var(--primary); animation: float-art 5s infinite;"></i>
+        <i class="ri-book-open-fill bg-icon"
+            style="bottom: 10%; left: 8%; color: var(--accent); animation: float-art 4s infinite;"></i>
+
+        <div class="container">
+            <div class="text-center mb-4 reveal">
+                <span class="hero-tag mb-1" style="background: var(--primary); color: white; border: none;">Meet the
+                    Heroes</span>
+                <h2>Magical Friends Await</h2>
+                <p class="subtitle mx-auto" style="max-width: 600px;">Every great adventure needs a hero. Hover over our
+                    magical friends to discover their secret abilities and favorite hobbies.</p>
+            </div>
+
+            <div class="flip-grid">
+                <!-- Hero 1 -->
+                <div class="flip-card-container reveal">
+                    <div class="magic-flip-card">
+                        <div class="flip-front"
+                            style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+                            <div class="char-avatar-wrapper">
+                                <img src="assets/images/book-1.png" alt="Barnaby Bear" class="floating-avatar">
+                            </div>
+                            <h3>Barnaby Bear</h3>
+                            <span>The Gentle Giant</span>
+                        </div>
+                        <div class="flip-back" style="background: var(--bg-white); border: 2px solid var(--primary);">
+                            <i class="ri-bear-smile-line back-icon" style="color: var(--primary);"></i>
+                            <h3 style="color: var(--text-main);">Secret Power:</h3>
+                            <p>Can find the sweetest honey in the darkest forests and gives the best hugs.</p>
+                            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Read
+                                His Story</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero 2 -->
+                <div class="flip-card-container reveal" style="transition-delay: 0.2s;">
+                    <div class="magic-flip-card">
+                        <div class="flip-front" style="background: linear-gradient(135deg, #FF9A9E, #FECFEF);">
+                            <div class="char-avatar-wrapper">
+                                <img src="assets/images/book-2.png" alt="Luna The Fairy" class="floating-avatar">
+                            </div>
+                            <h3 style="color: #2D3436;">Luna The Fairy</h3>
+                            <span style="color: #2D3436;">Stardust Weaver</span>
+                        </div>
+                        <div class="flip-back" style="background: var(--bg-white); border: 2px solid #FF9A9E;">
+                            <i class="ri-magic-line back-icon" style="color: #FF9A9E;"></i>
+                            <h3 style="color: var(--text-main);">Secret Power:</h3>
+                            <p>Sprinkles stardust to turn scary nightmares into colorful dreams of flying.</p>
+                            <a href="#" class="btn btn-outline"
+                                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-color: #FF9A9E; color: #FF9A9E;">Read
+                                Her Story</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero 3 -->
+                <div class="flip-card-container reveal" style="transition-delay: 0.4s;">
+                    <div class="magic-flip-card">
+                        <div class="flip-front" style="background: linear-gradient(135deg, var(--accent), #FFDCA8);">
+                            <div class="char-avatar-wrapper">
+                                <img src="assets/images/book-3.png" alt="Captain Pip" class="floating-avatar">
+                            </div>
+                            <h3 style="color: #2D3436;">Captain Pip</h3>
+                            <span style="color: #2D3436;">Space Explorer</span>
+                        </div>
+                        <div class="flip-back" style="background: var(--bg-white); border: 2px solid var(--accent);">
+                            <i class="ri-rocket-line back-icon" style="color: var(--accent);"></i>
+                            <h3 style="color: var(--text-main);">Secret Power:</h3>
+                            <p>Can turn any cardboard box into an interplanetary spaceship within seconds.</p>
+                            <a href="#" class="btn btn-outline"
+                                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-color: var(--accent); color: var(--accent);">Read
+                                His Story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding premium-testimonials"
+        style="background: var(--bg-white); position: relative; overflow: hidden; border-top: 1px solid var(--border);">
+        <div class="floating-stars">
+            <i class="ri-star-fill"
+                style="position: absolute; color: var(--accent); top: 10%; left: 10%; animation: float-art 4s infinite;"></i>
+            <i class="ri-star-half-line"
+                style="position: absolute; color: var(--primary); top: 20%; right: 15%; animation: float-art 5s infinite; font-size: 2rem;"></i>
+            <i class="ri-moon-fill"
+                style="position: absolute; color: var(--secondary); bottom: 15%; left: 20%; animation: float-art 6s infinite;"></i>
+        </div>
+        <div class="container relative" style="z-index: 2;">
+            <div class="text-center mb-4 reveal">
+                <span class="hero-tag mb-1">Happy Readers</span>
+                <h2>Magic Words from Parents</h2>
+            </div>
+
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="test-card reveal">
+                    <div class="test-quote">"</div>
+                    <p class="test-text">My daughter absolutely adores these stories. She insists on reading 'Secret
+                        Garden of Dreams' every single night before bed!</p>
+                    <div class="test-author">
+                        <div class="test-avatar">SJ</div>
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <span>Mother of two</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="test-card reveal" style="transition-delay: 0.2s;">
+                    <div class="test-quote">"</div>
+                    <p class="test-text">The illustrations are breathtaking, and the lessons woven into each tale are
+                        simply beautiful. A must-have for any child's library.</p>
+                    <div class="test-author">
+                        <div class="test-avatar" style="background: var(--accent);">MP</div>
+                        <div>
+                            <h4>Michael Peterson</h4>
+                            <span>Elementary Teacher</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="test-card reveal" style="transition-delay: 0.4s;">
+                    <div class="test-quote">"</div>
+                    <p class="test-text">Finally, books that my son actually wants to sit down and read! The interactive
+                        elements and engaging characters keep him hooked.</p>
+                    <div class="test-author">
+                        <div class="test-avatar" style="background: var(--secondary);">ED</div>
+                        <div>
+                            <h4>Elena Rodriguez</h4>
+                            <span>Parent & Blogger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Shared Footer Placeholder -->

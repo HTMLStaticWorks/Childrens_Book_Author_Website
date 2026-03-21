@@ -7,6 +7,7 @@
     <meta name="description"
         content="Read the latest news, writing tips, and storytelling adventures from [Author Name]'s blog. Tips for parents and aspiring writers.">
     <title>The Storyteller's Blog | [Author Name]</title>
+    <link rel="icon" href="assets/images/author.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
@@ -262,7 +263,110 @@
             }
         }
 
+        /* SECTION 5: Reading Milestone (Unique) */
+        .milestone-section {
+            padding: 8rem 0;
+            background: #FDFCF0;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.4s ease;
+        }
+
+        [data-theme="dark"] .milestone-section {
+            background: #0F172A;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .milestone-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .milestone-visual {
+            position: relative;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .milestone-circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 2px dashed var(--primary);
+            border-radius: 50%;
+            animation: rotate-slow 20s linear infinite;
+            opacity: 0.6;
+        }
+
+        .milestone-card {
+            position: absolute;
+            width: 200px;
+            height: 260px;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: rotate(-5deg);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2;
+        }
+
+        [data-theme="dark"] .milestone-card {
+            background: #1E293B;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .milestone-card:hover {
+            transform: rotate(0deg) scale(1.1);
+            z-index: 5;
+            border-color: var(--accent);
+        }
+
+        .milestone-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .floating-ink {
+            position: absolute;
+            font-size: 6rem;
+            color: var(--primary);
+            opacity: 0.05;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes rotate-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         @media (max-width: 900px) {
+            .milestone-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .milestone-visual {
+                height: 350px;
+                order: 2;
+            }
+
             .spotlight-grid {
                 grid-template-columns: 1fr;
             }
@@ -286,7 +390,7 @@
     </div>
 
     <!-- Shared Header Placeholder -->
-    <nav class="navbar"></nav>
+    <nav class="navbar nav-white"></nav>
 
     <!-- SECTION 1: Magic Header -->
     <header class="blog-hero">
@@ -393,6 +497,79 @@
                             upcoming Winter release. Leo discovers that the jungle looks very different in snow.</p>
                     </div>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Reading Milestone (Unique Section) -->
+    <section class="milestone-section">
+        <i class="ri-brush-fill floating-ink" style="top: 10%; right: 5%; transform: rotate(15deg);"></i>
+        <i class="ri-palette-line floating-ink"
+            style="bottom: 15%; left: 8%; transform: rotate(-20deg); font-size: 8rem;"></i>
+
+        <div class="container">
+            <div class="milestone-grid">
+                <div class="milestone-visual reveal">
+                    <div class="milestone-circle"></div>
+                    <div class="milestone-card"
+                        style="top: 10%; left: 15%; animation: float-spotlight 4s ease-in-out infinite alternate;">
+                        <i class="ri-book-3-line milestone-icon"></i>
+                        <h5>1M+ Stories</h5>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Read aloud worldwide in 2024</p>
+                    </div>
+                    <div class="milestone-card"
+                        style="bottom: 5%; right: 10%; transform: rotate(8deg); animation: float-spotlight 6s ease-in-out infinite alternate-reverse;">
+                        <i class="ri-heart-pulse-fill milestone-icon" style="color: var(--primary);"></i>
+                        <h5>Joy Guaranteed</h5>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">98% Parent Satisfaction Rate</p>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <span class="book-tag"
+                        style="background: var(--primary); color: white; border: none;">Milestones</span>
+                    <h2 style="font-size: 2.8rem; margin: 1.5rem 0;">A Community of <br><span
+                            style="color: var(--primary);">Dreamers</span></h2>
+                    <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Every blog post, every
+                        download, and every bedtime story is a step toward a world filled with more imagination. We're
+                        proud to support parents and teachers on this magical journey.</p>
+
+                    <ul style="list-style: none; padding: 0;">
+                        <li
+                            style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-weight: 600;">
+                            <i class="ri-checkbox-circle-fill" style="color: #27AE60; font-size: 1.5rem;"></i> Free
+                            Activity Sheets for Every Story
+                        </li>
+                        <li
+                            style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-weight: 600;">
+                            <i class="ri-checkbox-circle-fill" style="color: #27AE60; font-size: 1.5rem;"></i> Monthly
+                            Writing Tips for Aspiring Authors
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Magical Mailbox -->
+    <section class="mailbox-section">
+        <div class="container">
+            <div class="mailbox-container reveal">
+                <div class="mail-anim"><i class="ri-mail-send-line"></i></div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Join the Magic Mail</h2>
+                <p style="max-width: 600px; margin: 0 auto 2.5rem; color: var(--text-muted); font-size: 1.1rem;">
+                    Subscribe
+                    to our newsletter and get a secret coloring page delivered to your inbox every month.</p>
+
+                <form action="#" method="POST"
+                    style="max-width: 500px; margin: 0 auto; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <input type="email" placeholder="Your best email..."
+                        style="flex: 1; min-width: 250px; padding: 1.2rem; border-radius: var(--radius-full); border: 2px solid var(--border); font-family: inherit; font-size: 1rem;"
+                        required>
+                    <button type="submit" class="btn btn-primary"
+                        style="padding: 1.2rem 2.5rem; border-radius: var(--radius-full); font-weight: bold; border: none; cursor: pointer; transition: var(--transition);">Keep
+                        Me Posted!</button>
+                </form>
             </div>
         </div>
     </section>

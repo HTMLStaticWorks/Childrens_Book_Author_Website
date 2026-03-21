@@ -7,6 +7,7 @@
     <meta name="description"
         content="Official website of [Author Name], award-winning children's book author. Discover magical stories, books, and educational activities for kids.">
     <title>Magical Stories | [Author Name] - Children's Book Author</title>
+    <link rel="icon" href="assets/images/author.png" type="image/png">
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -176,6 +177,105 @@
 
 
 
+    <!-- Interactive Character Showcase Section -->
+    <section class="section-padding premium-characters"
+        style="background: var(--bg-light); border-top: 1px solid var(--border);">
+        <div class="container">
+            <div class="text-center mb-4 reveal">
+                <span class="hero-tag mb-1">Meet the Heroes</span>
+                <h2>The Character Universe</h2>
+                <p class="subtitle mx-auto" style="max-width: 600px;">Every great adventure needs a hero. Discover the
+                    magical friends waiting for you inside our stories.</p>
+            </div>
+
+            <div class="character-gallery">
+                <div class="char-panel reveal">
+                    <div class="char-img" style="background-image: url('assets/images/book-1.png');"></div>
+                    <div class="char-details">
+                        <h3>Barnaby Bear</h3>
+                        <p>A gentle giant who loves honey and bedtime stories.</p>
+                    </div>
+                </div>
+                <div class="char-panel reveal" style="transition-delay: 0.1s;">
+                    <div class="char-img" style="background-image: url('assets/images/book-2.png');"></div>
+                    <div class="char-details">
+                        <h3>Captain Pip</h3>
+                        <p>Exploring the galaxy one cardboard box at a time.</p>
+                    </div>
+                </div>
+                <div class="char-panel reveal" style="transition-delay: 0.2s;">
+                    <div class="char-img" style="background-image: url('assets/images/book-3.png');"></div>
+                    <div class="char-details">
+                        <h3>Luna the Fairy</h3>
+                        <p>Sprinkling stardust on dreams to make them colorful.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding premium-testimonials"
+        style="background: var(--bg-white); position: relative; overflow: hidden; border-top: 1px solid var(--border);">
+        <div class="floating-stars">
+            <i class="ri-star-fill"
+                style="position: absolute; color: var(--accent); top: 10%; left: 10%; animation: float-art 4s infinite;"></i>
+            <i class="ri-star-half-line"
+                style="position: absolute; color: var(--primary); top: 20%; right: 15%; animation: float-art 5s infinite; font-size: 2rem;"></i>
+            <i class="ri-moon-fill"
+                style="position: absolute; color: var(--secondary); bottom: 15%; left: 20%; animation: float-art 6s infinite;"></i>
+        </div>
+        <div class="container relative" style="z-index: 2;">
+            <div class="text-center mb-4 reveal">
+                <span class="hero-tag mb-1">Happy Readers</span>
+                <h2>Magic Words from Parents</h2>
+            </div>
+
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="test-card reveal">
+                    <div class="test-quote">"</div>
+                    <p class="test-text">My daughter absolutely adores these stories. She insists on reading 'Secret
+                        Garden of Dreams' every single night before bed!</p>
+                    <div class="test-author">
+                        <div class="test-avatar">SJ</div>
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <span>Mother of two</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="test-card reveal" style="transition-delay: 0.2s;">
+                    <div class="test-quote">"</div>
+                    <p class="test-text">The illustrations are breathtaking, and the lessons woven into each tale are
+                        simply beautiful. A must-have for any child's library.</p>
+                    <div class="test-author">
+                        <div class="test-avatar" style="background: var(--accent);">MP</div>
+                        <div>
+                            <h4>Michael Peterson</h4>
+                            <span>Elementary Teacher</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="test-card reveal" style="transition-delay: 0.4s;">
+                    <div class="test-quote">"</div>
+                    <p class="test-text">Finally, books that my son actually wants to sit down and read! The interactive
+                        elements and engaging characters keep him hooked.</p>
+                    <div class="test-author">
+                        <div class="test-avatar" style="background: var(--secondary);">ED</div>
+                        <div>
+                            <h4>Elena Rodriguez</h4>
+                            <span>Parent & Blogger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Shared Footer Placeholder -->
     <footer></footer>
 
@@ -279,8 +379,8 @@
 
         .hero-tag {
             display: inline-block;
-            background: var(--primary-light);
-            color: var(--primary);
+            background: var(--primary);
+            color: #ffffff;
             padding: 0.5rem 1.2rem;
             border-radius: 50px;
             font-size: 0.85rem;
@@ -304,6 +404,10 @@
 
             .hero-left {
                 order: 2;
+            }
+
+            .hero-left .flex-gap-sm {
+                justify-content: center;
             }
 
             .hero-right {
@@ -405,10 +509,19 @@
             }
 
             .author-portrait-wrapper {
-                padding-right: 0;
-                padding-bottom: 0;
+                padding-right: 1.5rem;
+                padding-bottom: 1.5rem;
                 max-width: 500px;
                 margin: 0 auto;
+            }
+
+            .premium-image {
+                box-shadow: 1.5rem 1.5rem 0 var(--primary-light);
+            }
+
+            .stat-badge {
+                right: 1.5rem;
+                bottom: 1.5rem;
             }
 
             .philosophy-features {

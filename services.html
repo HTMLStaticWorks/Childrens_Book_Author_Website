@@ -7,6 +7,7 @@
     <meta name="description"
         content="Explore the full collection of children's books by [Author Name]. Filter by age group and discover your next favorite story.">
     <title>Our Bookshelf | [Author Name] Book Collection</title>
+    <link rel="icon" href="assets/images/author.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
@@ -226,11 +227,44 @@
             }
 
             .hero-visual-content {
-                height: 350px;
+                height: 480px;
             }
 
             .floating-books-container {
-                transform: scale(0.8);
+                transform: scale(1);
+            }
+
+            .fb-1 {
+                width: 140px;
+                top: 0;
+                left: 0;
+            }
+
+            .fb-2 {
+                width: 130px;
+                top: 30%;
+                right: 0;
+            }
+
+            .fb-3 {
+                width: 120px;
+                bottom: 0;
+                left: 15%;
+            }
+
+            .filter-container {
+                justify-content: flex-start;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .filter-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            .filter-btn {
+                white-space: nowrap;
+                flex-shrink: 0;
             }
         }
 
@@ -582,6 +616,40 @@
                             <h3>The Mathematical Forest</h3>
                             <p>A puzzle-filled adventure where animals use basic math to solve forest mysteries.
                                 Learning made absolutely fun!</p>
+                            <a href="service-details.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 5 -->
+                <div class="book-item reveal" data-category="ages-3-6">
+                    <div class="book-card">
+                        <div class="book-img-wrapper">
+                            <img src="assets/images/book-2.png" alt="Book Cover 5">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-tag">Ages 3-6</span>
+                            <h3>The Brave Little Cloud</h3>
+                            <p>A gentle tale of courage about a tiny cloud learning to embrace its unique gift of making
+                                beautiful rainbows.</p>
+                            <a href="service-details.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Item 6 -->
+                <div class="book-item reveal" data-category="ages-6-10">
+                    <div class="book-card">
+                        <div class="book-img-wrapper">
+                            <img src="assets/images/book-3.png" alt="Book Cover 6">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-tag">Ages 6-10</span>
+                            <h3>Clockwork Owl Mystery</h3>
+                            <p>Dive into an adventure where science and deduction collide as friends uncover the secret
+                                of the old clock tower.</p>
                             <a href="service-details.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">View
                                 Details</a>
                         </div>
