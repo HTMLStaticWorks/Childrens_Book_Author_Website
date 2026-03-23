@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><a href="blog.html" class="nav-link" data-page="blog.html">Blog</a></li>
                 <li><a href="pricing.html" class="nav-link" data-page="pricing.html">Visits</a></li>
                 <li><a href="contact.html" class="nav-link" data-page="contact.html">Contact</a></li>
-                <li><a href="login.html" class="nav-link" data-page="login.html">Login</a></li>
+                <li><a href="login.html" class="btn btn-primary" data-page="login.html">Login</a></li>
             </ul>
 
             <div class="nav-right">
