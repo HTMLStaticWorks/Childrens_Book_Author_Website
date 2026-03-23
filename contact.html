@@ -18,7 +18,7 @@
             padding: 1rem 0 2rem;
         }
 
-        .contact-layout > .reveal:first-child {
+        .contact-layout>.reveal:first-child {
             display: flex;
             flex-direction: column;
         }
@@ -114,13 +114,14 @@
             font-family: 'Inter', sans-serif;
             font-size: 0.95rem;
             background: var(--bg-light);
+            color: var(--text-main);
             transition: var(--transition);
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
-            background: white;
+            background: var(--bg-white);
             box-shadow: 0 0 10px rgba(108, 92, 231, 0.1);
         }
 

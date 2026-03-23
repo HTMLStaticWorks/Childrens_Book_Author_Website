@@ -39,6 +39,11 @@
                     <span>O</span>
                     <span>R</span>
                     <span>Y</span>
+                    <span style="visibility: hidden; font-size: 0.5em;">&nbsp;</span>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>I</span>
+                    <span>L</span>
                 </div>
 
                 <span class="hero-tag">✨ New Adventure Awaits</span>
@@ -133,43 +138,67 @@
 
     <!-- Premium Process Section (Behind the Magic) -->
     <section class="section-padding premium-process"
-        style="background: var(--bg-white); border-top: 1px solid var(--border);">
-        <div class="container">
+        style="background: var(--bg-white); border-top: 1px solid var(--border); position: relative; overflow: hidden;">
+
+        <div class="container" style="position: relative; z-index: 2;">
             <div class="text-center mb-4 reveal">
                 <span class="hero-tag mb-1">Our Craft</span>
                 <h2 class="mb-2">How the Magic is Made</h2>
-                <p class="subtitle mx-auto" style="max-width: 600px; margin-left: auto; margin-right: auto;">Every book starts with a single whimsical thought.
+                <p class="subtitle mx-auto" style="max-width: 600px; margin-left: auto; margin-right: auto;">Every book
+                    starts with a single whimsical thought.
                     Here's how we weave those dreams into pages you can touch and hold forever.</p>
             </div>
 
             <div class="process-steps">
                 <!-- Step 1 -->
-                <div class="process-card reveal">
-                    <div class="proc-icon"><i class="ri-lightbulb-line"></i></div>
-                    <h3>The Spark</h3>
-                    <p>It starts with a tiny doodle or a whimsical phrase whispered by the wind during a long morning
-                        walk.</p>
+                <div class="process-card reveal" style="position: relative; overflow: hidden;">
+                    <div
+                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('assets/images/activity-art.png'); background-size: cover; background-position: center; opacity: 0.08; z-index: 0; pointer-events: none;">
+                    </div>
+                    <div style="position: relative; z-index: 1;">
+                        <div class="proc-icon"><i class="ri-lightbulb-line"></i></div>
+                        <h3>The Spark</h3>
+                        <p>It starts with a tiny doodle or a whimsical phrase whispered by the wind during a long
+                            morning
+                            walk.</p>
+                    </div>
                 </div>
                 <!-- Step 2 -->
-                <div class="process-card reveal" style="transition-delay: 0.1s;">
-                    <div class="proc-icon"><i class="ri-quill-pen-line"></i></div>
-                    <h3>The Ink</h3>
-                    <p>Characters are carefully given life with charcoal, ink, and a dash of heart on our tactile
-                        sketching pads.</p>
+                <div class="process-card reveal" style="transition-delay: 0.1s; position: relative; overflow: hidden;">
+                    <div
+                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('assets/images/hero-art.png'); background-size: cover; background-position: center; opacity: 0.08; z-index: 0; pointer-events: none;">
+                    </div>
+                    <div style="position: relative; z-index: 1;">
+                        <div class="proc-icon"><i class="ri-quill-pen-line"></i></div>
+                        <h3>The Ink</h3>
+                        <p>Characters are carefully given life with charcoal, ink, and a dash of heart on our tactile
+                            sketching pads.</p>
+                    </div>
                 </div>
                 <!-- Step 3 -->
-                <div class="process-card reveal" style="transition-delay: 0.2s;">
-                    <div class="proc-icon"><i class="ri-palette-line"></i></div>
-                    <h3>The Color</h3>
-                    <p>Vibrant digital brushes sweep across the canvas, painting worlds of wonder into the digital
-                        domain.</p>
+                <div class="process-card reveal" style="transition-delay: 0.2s; position: relative; overflow: hidden;">
+                    <div
+                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('assets/images/magical-library.png'); background-size: cover; background-position: center; opacity: 0.08; z-index: 0; pointer-events: none;">
+                    </div>
+                    <div style="position: relative; z-index: 1;">
+                        <div class="proc-icon"><i class="ri-palette-line"></i></div>
+                        <h3>The Color</h3>
+                        <p>Vibrant digital brushes sweep across the canvas, painting worlds of wonder into the digital
+                            domain.</p>
+                    </div>
                 </div>
                 <!-- Step 4 -->
-                <div class="process-card reveal" style="transition-delay: 0.3s;">
-                    <div class="proc-icon"><i class="ri-book-read-line"></i></div>
-                    <h3>The Binding</h3>
-                    <p>Stories finally find their physical home in your hands, ready for a lifetime of nightly bedside
-                        reads.</p>
+                <div class="process-card reveal" style="transition-delay: 0.3s; position: relative; overflow: hidden;">
+                    <div
+                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('assets/images/book-1.png'); background-size: cover; background-position: center; opacity: 0.08; z-index: 0; pointer-events: none;">
+                    </div>
+                    <div style="position: relative; z-index: 1;">
+                        <div class="proc-icon"><i class="ri-book-read-line"></i></div>
+                        <h3>The Binding</h3>
+                        <p>Stories finally find their physical home in your hands, ready for a lifetime of nightly
+                            bedside
+                            reads.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,7 +213,8 @@
             <div class="text-center mb-4 reveal">
                 <span class="hero-tag mb-1">Meet the Heroes</span>
                 <h2>The Character Universe</h2>
-                <p class="subtitle mx-auto" style="max-width: 600px; margin-left: auto; margin-right: auto;">Every great adventure needs a hero. Discover the
+                <p class="subtitle mx-auto" style="max-width: 600px; margin-left: auto; margin-right: auto;">Every great
+                    adventure needs a hero. Discover the
                     magical friends waiting for you inside our stories.</p>
             </div>
 
@@ -404,6 +434,10 @@
 
             .hero-left {
                 order: 2;
+            }
+
+            .home2-hero .flip-wrap {
+                justify-content: center;
             }
 
             .hero-left .flex-gap-sm {
