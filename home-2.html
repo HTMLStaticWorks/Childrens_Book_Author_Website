@@ -415,6 +415,15 @@
             line-height: 1.1;
         }
 
+        /* Fix RTL Reverse Words in Hero */
+        [dir="rtl"] .home2-hero h1,
+        [dir="rtl"] .home2-hero .flip-wrap {
+            direction: ltr;
+            text-align: right;
+            justify-content: flex-end;
+        }
+
+
         @media (max-width: 1024px) {
             .split-hero-container {
                 grid-template-columns: 1fr;
@@ -437,7 +446,15 @@
             .hero-right {
                 order: 1;
             }
+
+            /* Ensure center alignment in RTL mobile */
+            [dir="rtl"] .home2-hero h1,
+            [dir="rtl"] .home2-hero .flip-wrap {
+                text-align: center;
+                justify-content: center;
+            }
         }
+
 
 
         .large-text {
