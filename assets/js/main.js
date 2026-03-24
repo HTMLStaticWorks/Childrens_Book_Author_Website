@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>
 
             <div class="nav-right">
+                <button class="rtl-toggle" style="background: var(--primary); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.8rem; font-family: 'Fredoka', sans-serif;">RTL</button>
                 <button class="theme-toggle"><i class="ri-moon-line"></i></button>
                 <button class="menu-btn" aria-label="Toggle Menu">
                     <i class="ri-menu-3-line"></i>
@@ -37,7 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="pricing.html" class="mobile-nav-link" data-page="pricing.html">Visits</a>
             <a href="contact.html" class="mobile-nav-link" data-page="contact.html">Contact</a>
             <a href="login.html" class="mobile-nav-link" data-page="login.html">Login</a>
-            <button class="mobile-nav-link theme-toggle" style="background: transparent; border: none; text-align: left; cursor: pointer; padding: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; font-family: 'Fredoka', sans-serif;">Theme <i class="ri-moon-line" style="font-size: 1.5rem;"></i></button>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                <button class="mobile-nav-link theme-toggle" style="background: transparent; border: 1px solid var(--border); border-radius: 8px; flex: 1; text-align: left; cursor: pointer; padding: 0.5rem 1rem; display: flex; justify-content: space-between; align-items: center; font-family: 'Fredoka', sans-serif;">Theme <i class="ri-moon-line"></i></button>
+                <button class="mobile-nav-link rtl-toggle" style="background: transparent; border: 1px solid var(--border); border-radius: 8px; flex: 1; text-align: center; cursor: pointer; padding: 0.5rem 1rem; display: flex; justify-content: center; align-items: center; font-family: 'Fredoka', sans-serif;">RTL</button>
+            </div>
         </div>
         `;
 
@@ -159,11 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Dark Mode Toggle
+    // 3. Theme & RTL Toggles
     const themeToggles = document.querySelectorAll('.theme-toggle');
+    const rtlToggles = document.querySelectorAll('.rtl-toggle');
     const body = document.body;
+    const html = document.documentElement;
 
-    // Check local storage
+    // Check theme local storage
     const currentTheme = localStorage.getItem('theme') || 'light';
     body.setAttribute('data-theme', currentTheme);
     updateThemeIcons(currentTheme);
@@ -185,6 +191,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Check RTL local storage
+    const currentRtl = localStorage.getItem('rtl') === 'true';
+    if (currentRtl) {
+        html.setAttribute('dir', 'rtl');
+    }
+
+    rtlToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const isRtl = html.getAttribute('dir') === 'rtl';
+            if (isRtl) {
+                html.removeAttribute('dir');
+                localStorage.setItem('rtl', 'false');
+            } else {
+                html.setAttribute('dir', 'rtl');
+                localStorage.setItem('rtl', 'true');
+            }
+        });
+    });
 
     // 4. Scroll Reveal (Intersection Observer)
     const revealOptions = {
