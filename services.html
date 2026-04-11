@@ -70,7 +70,7 @@
         @keyframes float-color {
             0% {
                 transform: translateY(0);
-                text-shadow: 0 5px 15px rgba(253, 203, 110, 0.4);
+                text-shadow: 0 5px 15px var(--accent-glow);
             }
 
             100% {
@@ -295,7 +295,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(253, 203, 110, 0.1));
+            background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), rgba(var(--accent-rgb), 0.1));
             z-index: -1;
             opacity: 0;
             transition: var(--transition);
@@ -356,7 +356,7 @@
 
         /* Spotlight Section */
         .spotlight-section {
-            background: linear-gradient(120deg, var(--bg-light) 0%, rgba(162, 155, 254, 0.15) 100%);
+            background: linear-gradient(120deg, var(--bg-light) 0%, rgba(var(--secondary-rgb), 0.15) 100%);
             border-top: 1px dashed var(--border);
             border-bottom: 1px dashed var(--border);
             position: relative;
@@ -453,7 +453,7 @@
     </style>
 </head>
 
-<body data-theme="light">
+<body>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -462,6 +462,12 @@
 
     <!-- Shared Header Placeholder -->
     <nav class="navbar"></nav>
+
+    <!-- Decorative Blobs -->
+    <div class="blob-bg" style="width: 400px; height: 400px; top: -100px; left: -100px; background: var(--secondary);">
+    </div>
+    <div class="blob-bg" style="width: 500px; height: 500px; top: 30%; right: -200px; background: var(--peach);"></div>
+    <div class="blob-bg" style="width: 450px; height: 450px; bottom: 5%; left: -150px; background: var(--mint);"></div>
 
     <!-- Books Hero (Premium animated layout) -->
     <section class="books-hero-premium">

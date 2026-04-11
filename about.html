@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body data-theme="light">
+<body>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -21,6 +21,11 @@
 
     <!-- Shared Header Placeholder -->
     <nav class="navbar"></nav>
+
+    <!-- Decorative Blobs -->
+    <div class="blob-bg" style="width: 450px; height: 450px; top: -150px; left: -100px; background: var(--peach);">
+    </div>
+    <div class="blob-bg" style="width: 350px; height: 350px; bottom: 20%; right: -50px; background: var(--mint);"></div>
 
     <!-- About Hero -->
     <section class="section-padding"
@@ -94,7 +99,7 @@
     <!-- Mission (Unique Layout: Centered Glass Card) -->
     <section class="section-padding reveal"
         style="background: url('assets/images/magical-library.png') center/cover; padding: 0;">
-        <div style="background: rgba(108, 92, 231, 0.85); padding: 5rem 0 2rem; backdrop-filter: blur(4px);">
+        <div style="background: rgba(var(--primary-rgb), 0.85); padding: 5rem 0 2rem; backdrop-filter: blur(4px);">
             <div class="container text-center" style="max-width: 800px; color: white;">
                 <h2 style="color: white; margin-bottom: 2rem;">My Mission</h2>
                 <p class="large-text" style="color: white;">"To write stories that act as a bridge between the real and

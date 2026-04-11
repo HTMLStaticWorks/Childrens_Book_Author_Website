@@ -44,12 +44,12 @@
         /* SECTION 1: Magic Header */
         .blog-hero {
             position: relative;
-            padding: 10rem 0 6rem;
-            background: linear-gradient(135deg, #1A1A2E, #16213E, var(--primary));
-            color: white;
-            text-align: center;
+            padding: 8rem 0;
+            background: var(--bg-light);
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
             overflow: hidden;
-            border-bottom: 2px solid var(--accent);
         }
 
         .bh-cloud {
@@ -61,13 +61,7 @@
             z-index: 1;
         }
 
-        .bh-cloud-1 {
-            width: 300px;
-            height: 300px;
-            top: -100px;
-            left: -100px;
-            background: var(--accent);
-        }
+
 
         .bh-cloud-2 {
             width: 400px;
@@ -203,7 +197,7 @@
         }
 
         .mailbox-container {
-            background: linear-gradient(135deg, var(--primary), #8e44ad);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             border-radius: 40px;
             padding: 4rem;
             text-align: center;
@@ -223,7 +217,7 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(45deg, var(--accent), var(--primary), #FF9E79);
+            background: linear-gradient(45deg, var(--accent), var(--primary), var(--peach));
             z-index: -1;
             border-radius: 42px;
             animation: border-dance 4s linear infinite;
@@ -271,7 +265,7 @@
         /* SECTION 5: Reading Milestone (Unique) */
         .milestone-section {
             padding: 8rem 0;
-            background: #FDFCF0;
+            background: var(--bg-light);
             position: relative;
             overflow: hidden;
             transition: background-color 0.4s ease;
@@ -387,7 +381,7 @@
     </style>
 </head>
 
-<body data-theme="light">
+<body>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -395,28 +389,49 @@
     </div>
 
     <!-- Shared Header Placeholder -->
-    <nav class="navbar nav-white"></nav>
+    <nav class="navbar"></nav>
 
     <!-- SECTION 1: Magic Header -->
+    <!-- Redesigned Blog Hero (About Page Format) -->
     <header class="blog-hero">
-        <div class="bh-cloud bh-cloud-2"></div>
-        <div class="container" style="position: relative; z-index: 5;">
-            <div class="premium-onload anim-delay-1">
-                <span class="book-tag"
-                    style="background: rgba(255,255,255,0.2); color: white; border: none; margin-bottom: 1.5rem;">The
-                    Storyteller's Diary</span>
+
+
+
+        <div class="container hero-grid" style="position: relative; z-index: 5;">
+            <div class="reveal-content">
+                <div class="premium-onload anim-delay-1">
+                    <span class="book-tag"
+                        style="background: var(--primary); color: white; border: none; margin-bottom: 1.5rem; display: inline-block;">Storyteller's
+                        Diary</span>
+                </div>
+                <h1 class="premium-onload anim-delay-2"
+                    style="font-size: clamp(2.8rem, 8vw, 4.8rem); line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-main);">
+                    Whispers from the <br><span style="color: var(--primary);">Wonderland</span></h1>
+                <p class="premium-onload anim-delay-3"
+                    style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.6;">
+                    Welcome to the digital hearth where every spark of an idea becomes a blazing story. Here, I share
+                    the secrets behind my sketches, writing tips for parents, and the magical inspirations that turn
+                    everyday moments into childhood memories.
+                </p>
+                <div class="premium-onload anim-delay-3" style="animation-delay: 0.7s;">
+                    <a href="#latest-posts" class="btn btn-primary"
+                        style="padding: 1rem 2.5rem; border-radius: var(--radius-full);">Explore Latest Tales <i
+                            class="ri-arrow-down-line"></i></a>
+                </div>
             </div>
-            <h1 class="premium-onload anim-delay-2"
-                style="font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 1rem; color: #FFF;">
-                Chronicles of Creativity</h1>
-            <p class="premium-onload anim-delay-3"
-                style="max-width: 600px; margin: 0 auto; font-size: 1.2rem; color: rgba(255,255,255,0.9);">Step behind
-                the curtain. Discover writing tips, early sketches, and the magic that brings our books to life.</p>
+
+            <div class="premium-onload anim-delay-3" style="position: relative; animation-delay: 0.8s;">
+                <div class="hero-image-wrapper">
+                    <img src="assets/images/hero.png" alt="Stories in the making"
+                        style="width: 100%; border-radius: var(--radius-lg); z-index: 2; box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+        </div>
         </div>
     </header>
 
     <!-- SECTION 2: Spotlight Story -->
-    <section class="spotlight-wrapper">
+    <section class="spotlight-wrapper" id="latest-posts">
         <div class="container">
             <div class="spotlight-grid">
                 <div class="reveal" style="position: relative; z-index: 2;">
@@ -556,13 +571,13 @@
                     <ul style="list-style: none; padding: 0;">
                         <li
                             style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-weight: 600;">
-                            <i class="ri-checkbox-circle-fill" style="color: #27AE60; font-size: 1.5rem;"></i>
+                            <i class="ri-checkbox-circle-fill" style="color: var(--mint); font-size: 1.5rem;"></i>
                             Free
                             Activity Sheets for Every Story
                         </li>
                         <li
                             style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-weight: 600;">
-                            <i class="ri-checkbox-circle-fill" style="color: #27AE60; font-size: 1.5rem;"></i>
+                            <i class="ri-checkbox-circle-fill" style="color: var(--mint); font-size: 1.5rem;"></i>
                             Monthly
                             Writing Tips for Aspiring Authors
                         </li>

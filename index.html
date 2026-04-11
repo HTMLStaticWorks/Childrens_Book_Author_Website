@@ -31,7 +31,7 @@
     </script>
 </head>
 
-<body data-theme="light">
+<body>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -41,6 +41,13 @@
     <!-- Shared Header Placeholder -->
     <nav class="navbar"></nav>
 
+    <!-- Decorative Blobs -->
+    <div class="blob-bg" style="width: 400px; height: 400px; top: -100px; right: -100px; background: var(--secondary);">
+    </div>
+    <div class="blob-bg" style="width: 300px; height: 300px; top: 40%; left: -50px; background: var(--mint);"></div>
+    <div class="blob-bg" style="width: 500px; height: 500px; bottom: 10%; right: -150px; background: var(--accent);">
+    </div>
+
     <!-- Typewriter Hero Section -->
     <section class="typewriter-hero">
         <div class="container split-hero-container">
@@ -49,7 +56,8 @@
                 <h1 class="mb-1">Story <span class="green">Tail</span></h1>
                 <h2 id="typewriter-output" class="mb-2" style="font-size: clamp(2rem, 5vw, 3.5rem); min-height: 1.2em;">
                 </h2><span class="typewriter-cursor"></span>
-                <p class="subtitle mb-3">Where every page leads to a new adventure for curious young minds. Join
+                <p class="subtitle mb-3" style="font-size: 1.2rem; color: var(--text-muted);">Where every page leads to
+                    a new adventure for curious young minds. Join
                     thousands of families exploring magical realms through our award-winning collection of bedtime
                     stories and character-building tales.</p>
                 <div class="flex-gap-sm mt-3">
@@ -67,7 +75,9 @@
     </section>
 
     <!-- Featured Books (Unique Layout: Centered Storytelling) -->
-    <section class="section-padding" style="background: var(--bg-white);">
+    <section class="section-padding" style="background: var(--bg-white); position: relative; overflow: hidden;">
+        <div class="blob-bg"
+            style="width: 300px; height: 300px; top: 10%; right: -100px; background: var(--sky); opacity: 0.1;"></div>
         <div class="container">
             <div class="text-center mb-3 reveal">
                 <span class="book-tag">Reader Favorites</span>
@@ -249,19 +259,20 @@
                 <!-- Hero 2 -->
                 <div class="flip-card-container reveal" style="transition-delay: 0.2s;">
                     <div class="magic-flip-card">
-                        <div class="flip-front" style="background: linear-gradient(135deg, #FF9A9E, #FECFEF);">
+                        <div class="flip-front"
+                            style="background: linear-gradient(135deg, var(--peach), var(--strawberry));">
                             <div class="char-avatar-wrapper">
                                 <img src="assets/images/book-2.png" alt="Luna The Fairy" class="floating-avatar">
                             </div>
-                            <h3 style="color: #2D3436;">Luna The Fairy</h3>
-                            <span style="color: #2D3436;">Stardust Weaver</span>
+                            <h3 style="color: var(--text-main);">Luna The Fairy</h3>
+                            <span style="color: var(--text-main);">Stardust Weaver</span>
                         </div>
-                        <div class="flip-back" style="background: var(--bg-white); border: 2px solid #FF9A9E;">
-                            <i class="ri-magic-line back-icon" style="color: #FF9A9E;"></i>
+                        <div class="flip-back" style="background: var(--bg-white); border: 2px solid var(--peach);">
+                            <i class="ri-magic-line back-icon" style="color: var(--peach);"></i>
                             <h3 style="color: var(--text-main);">Secret Power:</h3>
                             <p>Sprinkles stardust to turn scary nightmares into colorful dreams of flying.</p>
                             <a href="#" class="btn btn-outline"
-                                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-color: #FF9A9E; color: #FF9A9E;">Read
+                                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-color: var(--peach); color: var(--peach);">Read
                                 Her Story</a>
                         </div>
                     </div>
@@ -270,12 +281,13 @@
                 <!-- Hero 3 -->
                 <div class="flip-card-container reveal" style="transition-delay: 0.4s;">
                     <div class="magic-flip-card">
-                        <div class="flip-front" style="background: linear-gradient(135deg, var(--accent), #FFDCA8);">
+                        <div class="flip-front"
+                            style="background: linear-gradient(135deg, var(--accent), var(--sunshine));">
                             <div class="char-avatar-wrapper">
                                 <img src="assets/images/book-3.png" alt="Captain Pip" class="floating-avatar">
                             </div>
-                            <h3 style="color: #2D3436;">Captain Pip</h3>
-                            <span style="color: #2D3436;">Space Explorer</span>
+                            <h3 style="color: var(--text-main);">Captain Pip</h3>
+                            <span style="color: var(--text-main);">Space Explorer</span>
                         </div>
                         <div class="flip-back" style="background: var(--bg-white); border: 2px solid var(--accent);">
                             <i class="ri-rocket-line back-icon" style="color: var(--accent);"></i>

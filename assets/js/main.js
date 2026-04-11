@@ -1,9 +1,15 @@
+// Immediate Theme Check
+(function () {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', savedTheme);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // 0. Global Header Injection
     const renderHeader = () => {
         const headerHTML = `
         <div class="container nav-container">
-            <a href="index.html" class="logo">Story<span>Tail</span></a>
+            <a href="index.html" class="logo"><i class="ri-sparkling-fill"></i> Story<span>Tail</span></a>
 
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link" data-page="index.html">Home</a></li>
@@ -79,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="flex-gap-sm justify-center mt-3">
                             <a href="services.html" class="btn btn-primary">Browse All Books <i
                                     class="ri-book-3-line"></i></a>
-                            <a href="activity.html" class="btn btn-outline" style="border-color: white; color: white;">Free
+                            <a href="services.html" class="btn btn-outline" style="border-color: #ffffff;">Free
                                 Activities</a>
                         </div>
                     </div>
@@ -92,9 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="container footer-grid mb-3 reveal" style="padding-top: 6rem; padding-bottom: 3rem;">
             <div class="footer-about">
-                <a href="index.html" class="logo">Story<span>Tail</span></a>
-                <p class="mt-1" style="color: var(--text-muted);">Empowering children to dream big and learn through the
-                    power of imaginative storytelling.</p>
+                <a href="index.html" class="logo"><i class="ri-sparkling-fill"></i> Story<span>Tail</span></a>
+                <p class="mt-1" style="color: var(--text-muted);">Unlocking worlds of wonder and imagination for little readers everywhere. Let's make every bedtime a magical adventure.</p>
                 <div class="social-links">
                     <a href="#" class="social-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
                     <a href="#" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
@@ -169,17 +174,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const html = document.documentElement;
 
-    // Check theme local storage
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    body.setAttribute('data-theme', currentTheme);
-    updateThemeIcons(currentTheme);
+    updateThemeIcons(localStorage.getItem('theme') || 'light');
 
     themeToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
-            const theme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            body.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            updateThemeIcons(theme);
+            const currentTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
+            updateThemeIcons(currentTheme);
         });
     });
 

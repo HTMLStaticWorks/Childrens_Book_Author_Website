@@ -11,17 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .pricing-page[data-theme="dark"] {
-            --bg-light: #F9F7F2;
-            --bg-white: #FFFFFF;
-            --text-main: #2D3436;
-            --text-muted: #636E72;
-            --border: rgba(108, 92, 231, 0.1);
-            --glass: rgba(255, 255, 255, 0.7);
-            --glass-border: rgba(255, 255, 255, 0.4);
-            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -96,19 +85,66 @@
             padding: 3rem 0 6rem;
         }
 
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+        .faq-accordion {
+            max-width: 850px;
+            margin: 3rem auto 0;
         }
 
         .faq-item {
-            margin-bottom: 2rem;
+            background: var(--bg-white);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            list-style: none;
         }
 
-        .faq-item h4 {
-            margin-bottom: 1.2rem;
+        .faq-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-header {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            outline: none;
+        }
+
+        .faq-header::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-header h4 {
+            margin: 0;
+            color: var(--text-main);
+            font-size: 1.1rem;
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(108, 92, 231, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--primary);
+            transition: var(--transition);
+        }
+
+        details[open] .faq-icon {
+            background: var(--primary);
+            color: white;
+            transform: rotate(45deg);
+        }
+
+        .faq-content {
+            padding: 0 2rem 1.8rem;
+            color: var(--text-muted);
+            line-height: 1.7;
         }
 
 
@@ -210,7 +246,7 @@
     </style>
 </head>
 
-<body data-theme="light" class="pricing-page">
+<body class="pricing-page">
 
     <!-- Preloader -->
     <div id="preloader">
@@ -243,7 +279,8 @@
                     <li><i class="ri-checkbox-circle-fill"></i> 45-min Zoom Q&A session</li>
                     <li><i class="ri-checkbox-circle-fill"></i> Live reading of one book</li>
                     <li><i class="ri-checkbox-circle-fill"></i> Digital activity pack</li>
-                    <li><i class="ri-close-circle-line" style="color: grey; opacity: 0.3;"></i> Physical book signing
+                    <li><i class="ri-close-circle-line" style="color: var(--text-muted); opacity: 0.3;"></i> Physical
+                        book signing
                     </li>
                 </ul>
                 <a href="contact.html" class="btn btn-outline" style="width: 100%;">Enquire Now</a>
@@ -286,7 +323,7 @@
     <section class="booking-steps-section">
         <div class="container">
             <div class="reveal">
-                <h2 style="font-size: 2.8rem; margin-bottom: 1rem; color: var(--text-main);">From Inquiry to Inspiration
+                <h2 style="margin-bottom: 1rem; color: var(--text-main);">From Inquiry to Inspiration
                 </h2>
                 <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Bringing magic to your school is
                     easier than you think. Follow these three simple steps to secure your date.</p>
@@ -322,27 +359,56 @@
     <section class="faq-section">
         <div class="container">
             <h2 class="text-center mb-3 reveal">Common Questions</h2>
-            <div class="faq-grid reveal">
-                <div class="faq-item">
-                    <h4>Do you travel internationally?</h4>
-                    <p>Yes! While I am based in Storyville, I love traveling to meet readers abroad. Travel and
-                        accommodation fees apply for locations outside a 50-mile radius.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>What age groups do you present to?</h4>
-                    <p>I have tailored sessions for Early Years (Pre-K) all the way up to Middle School (Grades 6-8). My
-                        keynote speeches are designed for adults/educators.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Are books available for pre-order?</h4>
-                    <p>Absolutely. We provide a pre-order form for schools to distribute to parents two weeks before the
-                        visit to ensure every child gets their signed copy.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Can we record the session?</h4>
-                    <p>Virtual visits may be recorded for internal school use only. Recording of physical assemblies is
-                        permitted with prior written consent.</p>
-                </div>
+            <div class="faq-accordion reveal">
+                <!-- FAQ 1 -->
+                <details class="faq-item">
+                    <summary class="faq-header">
+                        <h4>Do you travel internationally?</h4>
+                        <span class="faq-icon"><i class="ri-add-line"></i></span>
+                    </summary>
+                    <div class="faq-content">
+                        <p>Yes! While I am based in Storyville, I love traveling to meet readers abroad. Travel and
+                            accommodation fees apply for locations outside a 50-mile radius.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="faq-item">
+                    <summary class="faq-header">
+                        <h4>What age groups do you present to?</h4>
+                        <span class="faq-icon"><i class="ri-add-line"></i></span>
+                    </summary>
+                    <div class="faq-content">
+                        <p>I have tailored sessions for Early Years (Pre-K) all the way up to Middle School (Grades
+                            6-8).
+                            My keynote speeches are designed for adults/educators.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="faq-item">
+                    <summary class="faq-header">
+                        <h4>Are books available for pre-order?</h4>
+                        <span class="faq-icon"><i class="ri-add-line"></i></span>
+                    </summary>
+                    <div class="faq-content">
+                        <p>Absolutely. We provide a pre-order form for schools to distribute to parents two weeks before
+                            the visit to ensure every child gets their signed copy.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="faq-item">
+                    <summary class="faq-header">
+                        <h4>Can we record the session?</h4>
+                        <span class="faq-icon"><i class="ri-add-line"></i></span>
+                    </summary>
+                    <div class="faq-content">
+                        <p>Virtual visits may be recorded for internal school use only. Recording of physical assemblies
+                            is
+                            permitted with prior written consent.</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>

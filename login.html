@@ -74,7 +74,7 @@
 
         .social-btns {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             margin-top: 1rem;
             margin-bottom: 1.5rem;
@@ -194,9 +194,15 @@
     </div>
 
     <section class="auth-container">
+        <!-- Decorative Blobs -->
+        <div class="blob-bg"
+            style="width: 400px; height: 400px; top: -100px; right: -100px; background: var(--secondary);"></div>
+        <div class="blob-bg" style="width: 300px; height: 300px; bottom: -50px; left: -50px; background: var(--mint);">
+        </div>
+
         <div class="auth-card">
             <header class="auth-header">
-                <a href="index.html" class="logo">Story<span>Tail</span></a>
+                <a href="index.html" class="logo"><i class="ri-sparkling-fill"></i> Story<span>Tail</span></a>
                 <p style="color: var(--text-muted);">Welcome back!</p>
             </header>
 
@@ -206,11 +212,11 @@
                     <input type="email" class="form-control" placeholder="reader@example.com" required>
                 </div>
                 <div class="form-group">
-                    <div style="display: flex; justify-content: space-between;">
-                        <label>Password</label>
-                        <a href="#" style="font-size: 0.8rem; color: var(--primary);">Forgot?</a>
-                    </div>
+                    <label>Password</label>
                     <input type="password" class="form-control" placeholder="••••••••" required>
+                    <div style="text-align: right; margin-top: 0.5rem;">
+                        <a href="#" style="font-size: 0.8rem; color: var(--primary);">Forgot Password?</a>
+                    </div>
                 </div>
 
                 <button type="submit" class="btn btn-primary"
@@ -227,6 +233,9 @@
                 </button>
                 <button class="btn-social">
                     <i class="ri-facebook-fill" style="color: #1877F2;"></i> Facebook
+                </button>
+                <button class="btn-social">
+                    <i class="ri-apple-fill" style="color: var(--text-main);"></i> Apple
                 </button>
             </div>
 
