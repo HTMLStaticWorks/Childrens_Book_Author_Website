@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="blog.html" class="mobile-nav-link" data-page="blog.html">Blog</a>
             <a href="pricing.html" class="mobile-nav-link" data-page="pricing.html">Visits</a>
             <a href="contact.html" class="mobile-nav-link" data-page="contact.html">Contact</a>
-            <a href="login.html" class="mobile-nav-link" data-page="login.html">Login</a>
-            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                <button class="mobile-nav-link theme-toggle" style="background: transparent; border: 1px solid var(--border); border-radius: 8px; flex: 1; text-align: left; cursor: pointer; padding: 0.5rem 1rem; display: flex; justify-content: space-between; align-items: center; font-family: 'Fredoka', sans-serif;">Theme <i class="ri-moon-line"></i></button>
-                <button class="mobile-nav-link rtl-toggle" style="background: transparent; border: 1px solid var(--border); border-radius: 8px; flex: 1; text-align: center; cursor: pointer; padding: 0.5rem 1rem; display: flex; justify-content: center; align-items: center; font-family: 'Fredoka', sans-serif;">RTL</button>
+            <a href="login.html" class="btn btn-primary mobile-login-btn" data-page="login.html">Login</a>
+            <div class="mobile-nav-actions">
+                <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle Theme"><i class="ri-moon-line"></i></button>
+                <button class="rtl-toggle mobile-rtl-toggle">RTL</button>
             </div>
         </div>
         `;

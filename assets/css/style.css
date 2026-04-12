@@ -28,16 +28,16 @@
     --accent-glow: rgba(var(--accent-rgb), 0.4);
 
     /* Extended Theme Colors */
-    --mint: #55E6C1;
-    --mint-rgb: 85, 230, 193;
-    --sky: #48DBFB;
-    --sky-rgb: 72, 219, 251;
-    --peach: #FF9FF3;
-    --peach-rgb: 255, 159, 243;
-    --strawberry: #FF6B6B;
-    --strawberry-rgb: 255, 107, 107;
-    --sunshine: #F9CA24;
-    --sunshine-rgb: 249, 202, 36;
+    --mint: #8E82EF;
+    --mint-rgb: 142, 130, 239;
+    --sky: #A29BFE;
+    --sky-rgb: 162, 155, 254;
+    --peach: #8E82EF;
+    --peach-rgb: 142, 130, 239;
+    --strawberry: #6C5CE7;
+    --strawberry-rgb: 108, 92, 231;
+    --sunshine: #FFBE76;
+    --sunshine-rgb: 255, 190, 118;
 
     /* Neutrals */
     --bg-light: #FFFBF2;
@@ -382,6 +382,30 @@ a {
     color: var(--primary);
 }
 
+.mobile-login-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.mobile-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.mobile-nav-actions .mobile-theme-toggle {
+    flex-shrink: 0;
+}
+
+.mobile-nav-actions .mobile-rtl-toggle {
+    flex: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .close-menu {
     position: absolute;
     top: 2rem;
@@ -393,6 +417,10 @@ a {
 
 @media (max-width: 1024px) {
     .nav-links {
+        display: none;
+    }
+
+    .nav-right .rtl-toggle {
         display: none;
     }
 
