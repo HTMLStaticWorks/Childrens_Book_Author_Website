@@ -362,20 +362,47 @@
             }
 
             .milestone-visual {
-                height: 350px;
+                height: 600px;
                 order: 2;
             }
 
-            .spotlight-grid {
-                grid-template-columns: 1fr;
+            .milestone-card {
+                width: 180px !important;
+                height: 240px !important;
+            }
+
+            .milestone-card:nth-of-type(1) {
+                top: 0 !important;
+                left: 50% !important;
+                transform: translateX(-50%) rotate(-5deg) !important;
+            }
+
+            .milestone-card:nth-of-type(2) {
+                bottom: 0 !important;
+                left: 50% !important;
+                transform: translateX(-50%) rotate(5deg) !important;
+            }
+
+            .blog-hero {
+                padding: 8rem 0 4rem;
             }
 
             .mailbox-container {
                 padding: 2.5rem 1.5rem;
             }
 
-            .blog-hero {
-                padding: 8rem 0 4rem;
+            .spot-badge {
+                margin-bottom: 2rem;
+            }
+
+            .spotlight-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .spotlight-img-wrap div[style*="position: absolute"] {
+                left: 10px !important;
+                bottom: 10px !important;
             }
         }
     </style>
@@ -422,7 +449,7 @@
 
             <div class="premium-onload anim-delay-3" style="position: relative; animation-delay: 0.8s;">
                 <div class="hero-image-wrapper">
-                    <img src="assets/images/hero-art.png" alt="Stories in the making"
+                    <img src="assets/images/blog-hero.png" alt="Magical Stories in the making"
                         style="width: 100%; border-radius: var(--radius-lg); z-index: 2; box-shadow: var(--shadow-lg);">
                 </div>
             </div>
@@ -462,11 +489,6 @@
 
                 <div class="spotlight-img-wrap reveal" style="transition-delay: 0.3s;">
                     <img src="assets/images/hero.png" alt="Sketching process">
-                    <!-- Floating decorative element -->
-                    <div
-                        style="position: absolute; bottom: -20px; left: -20px; background: var(--accent); color: white; padding: 1rem; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 10px 20px rgba(253, 203, 110, 0.4); animation: orbital 10s infinite linear; z-index: 5;">
-                        <i class="ri-pencil-ruler-2-line"></i>
-                    </div>
                 </div>
             </div>
         </div>
@@ -559,7 +581,7 @@
 
                 <div class="reveal" style="transition-delay: 0.2s;">
                     <span class="book-tag"
-                        style="background: var(--primary); color: white; border: none;">Milestones</span>
+                        style="background: var(--primary); color: white; border: none; display: inline-block;">Milestones</span>
                     <h2 style="font-size: 2.8rem; margin: 1.5rem 0;">A Community of <br><span
                             style="color: var(--primary);">Dreamers</span></h2>
                     <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Every blog

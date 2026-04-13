@@ -45,18 +45,14 @@
             margin-bottom: 0.5rem;
         }
 
-        .theme-toggle-fixed {
+        .auth-controls-fixed {
             position: absolute;
             top: 2rem;
-            right: 2rem;
+            right: 2.5rem;
             z-index: 100;
-        }
-
-        .rtl-toggle-fixed {
-            position: absolute;
-            top: 2rem;
-            right: 5.25rem;
-            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
         .theme-toggle {
@@ -80,29 +76,6 @@
             border-color: var(--primary);
         }
 
-        .rtl-toggle-auth.rtl-toggle {
-            background: var(--bg-white);
-            border: 1px solid var(--border);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--text-main);
-            padding: 0;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .rtl-toggle-auth.rtl-toggle:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            transform: none;
-            box-shadow: var(--shadow-sm);
-        }
 
         .social-btns {
             display: grid;
@@ -231,15 +204,11 @@
         <div class="loader-blob"></div>
     </div>
 
-    <!-- Theme Toggle -->
-    <div class="theme-toggle-fixed">
-        <button class="theme-toggle" aria-label="Toggle Theme">
+    <!-- Header Controls -->
+    <div class="auth-controls-fixed">
+        <button id="rtl-toggle" class="rtl-btn rtl-toggle" aria-label="Toggle RTL">RTL</button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
             <i class="ri-moon-line"></i>
-        </button>
-    </div>
-    <div class="rtl-toggle-fixed">
-        <button class="rtl-toggle rtl-toggle-auth" aria-label="Toggle RTL">
-            <i class="ri-text-direction-r"></i>
         </button>
     </div>
 
